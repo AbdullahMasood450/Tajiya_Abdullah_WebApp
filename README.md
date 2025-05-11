@@ -12,14 +12,15 @@ This project is a full-stack web application deployed on AWS cloud infrastructur
   - Frontend on Elastic Beanstalk
 
 ## 🚀 Deployment Guide
-###🧩 1. Pre-requisites
+🧩 1. Pre-requisites
 - AWS account with Free Tier access
 - AWS CLI installed and configured
 - Node.js and npm installed locally
 - React installed locally (for frontend development)
 - Git for cloning the project
 
-###☁️ 2. AWS Infrastructure Setup
+☁️ 2. AWS Infrastructure Setup
+
 🔹 VPC Configuration
 - Created a custom VPC: Taijya-Abdullah-AppVPC with CIDR block 10.0.0.0/16.
 - Added 4 subnets:
@@ -46,7 +47,7 @@ This project is a full-stack web application deployed on AWS cloud infrastructur
 - Created an S3 bucket for user-uploaded files (images and PDFs).
 - Attached bucket policy to allow access from the EC2 IAM role only.
 
-###⚙️ 3. Backend Deployment (Node.js on EC2)
+⚙️ 3. Backend Deployment (Node.js on EC2)
 - Launched an EC2 instance in the public subnet with attached IAM role and security group
 - Connected via SSH using a key pair
 - Installed Node.js and dependencies
@@ -55,7 +56,7 @@ This project is a full-stack web application deployed on AWS cloud infrastructur
 - Started the server using:
         node index.js
 
-###🌐4. Frontend Deployment 
+🌐4. Frontend Deployment 
 - Created an Elastic Beanstalk application and environment
 - Selected custom VPC and public subnets for deployment
 - Attached IAM role for Beanstalk
@@ -63,7 +64,7 @@ This project is a full-stack web application deployed on AWS cloud infrastructur
         npm run build
 - Zipped the build folder and uploaded it through the Elastic Beanstalk dashboard
 
-### 🔐5. Environment Variables
+🔐5. Environment Variables
 You need to set the following environment variables:
 - `RDS_HOSTNAME`
 - `RDS_USERNAME`
