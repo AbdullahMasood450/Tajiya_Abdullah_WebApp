@@ -1,0 +1,5 @@
+commands.txt
+frontend/
+backend/.env
+TajiyaAbdullahEC2Key.pem
+backend/node_modules
